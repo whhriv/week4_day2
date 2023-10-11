@@ -1,0 +1,43 @@
+author = ["Joel Carter", "Victor aNisimov", "Andrew P. Garfield", "David hassELHOFF", "Gary A.J. Bernstein"]
+
+
+result = sorted(author, key=lambda x: x.split()[-1].lower())
+
+print(result)
+
+
+places = [('Nashua',32),("Boston",12),("Los Angeles",44),("Miami",29)]
+
+
+exercise3 = list(map(lambda x: (x[0], (x[1] * 9/5) + 32), places))
+print(exercise3)
+
+
+n = 6
+
+def fibo(n):
+   if n <= 2:
+       return n
+   else:
+       return(fibo(n-1) + fibo(n-2))
+
+
+
+
+if n <= 0:
+    print("learned the hard way")
+else:
+   
+   for i in range(n):
+        print(f"Iteration {i}: {fibo(i)}")
+
+def generator(num):
+    while num >=0:
+        yield num**2
+        num-=1
+
+
+
+
+for i in generator(10):
+    print(i)
